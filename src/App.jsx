@@ -1,33 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { TextField } from '@mui/material'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const listOfFruits = ['Banana', 'Apple', 'Orange', 'Mango', 'Pineapple']
+  const [fruits, updateFruits] = useState(listOfFruits);
+  
+  const filterFruits = (value) => {
+    const res = listOfFruits.filter(fruit => fruit.toUpperCase().includes(value.toUpperCase()))
+    updateFruits(res)
+  }
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h1>Feature search filter in React</h1>
+      <TextField id="outlined-basic" label="Search" variant="outlined" onChange = { ($event) => filterFruits($event.target.value) } />
+      <ul>
+        {fruits.map((fruit, index) => <li key={index}>{fruit}</li>)}
+      </ul>
     </>
   )
 }

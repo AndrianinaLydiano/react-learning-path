@@ -1,0 +1,1 @@
+The assets folder contains all of the project's static files, such as your logo, fonts, images, and favicons.

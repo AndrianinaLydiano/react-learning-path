@@ -1,0 +1,1 @@
+Components folder contains a bit collection of UI codes such as buttons, forms, avatars, and so on.

@@ -1,0 +1,1 @@
+The views folder contains all your React application's web pages.

@@ -1,0 +1,1 @@
+Hooks folder contains codes and logic that can be reused across multiple components.
