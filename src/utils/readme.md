@@ -1,0 +1,1 @@
+The utils folder contains reusable function snippets for performing quick tasks like text truncation or down casing.

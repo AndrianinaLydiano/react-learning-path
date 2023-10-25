@@ -1,0 +1,1 @@
+Services folder contains code that allows you to interact with external API resources.
