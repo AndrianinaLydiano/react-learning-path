@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Button, TextField } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import TodoContainer from "./components/Todo/TodoContainer";
 
 const theme = createTheme({
   palette: {
@@ -48,6 +49,9 @@ function App() {
       <Button color="primary" variant="outlined" onClick={() => setCounter(0)}>
         Number of fruits clicked : {counter}
       </Button>
+      <div className="todo-list-container">
+        <TodoContainer />
+      </div>
     </ThemeProvider>
   );
 }
